@@ -1,0 +1,9 @@
+Icons on streetdrill.app (the game, audience and feature icons drawn as inline SVG)
+
+These are the same MaterialCommunityIcons glyphs the StreetDrill app uses, read from the font that
+ships with @expo/vector-icons (react-native-vector-icons, MIT License, Copyright (c) 2015 Joel
+Arvidsson) by scripts/site/icon-paths.mjs.
+
+Material Design Icons by Pictogrammers: https://pictogrammers.com
+Icons and fonts: Apache License 2.0, as described at https://pictogrammers.com/docs/general/license/
+Apache License 2.0: https://www.apache.org/licenses/LICENSE-2.0
