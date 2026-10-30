@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-30T19:23:41.495Z",
+ "updatedAt": "2026-10-30T20:51:24.927Z",
  "cities": [
   {
    "slug": "garland-tx",
@@ -22,6 +22,26 @@
    "stationsFrom": "department",
    "districts": "estimated",
    "landmarks": 168
+  },
+  {
+   "slug": "murphy-tx",
+   "name": "Murphy",
+   "state": "TX",
+   "label": "Murphy, TX",
+   "file": "murphy-tx.json",
+   "bytes": 424200,
+   "generatedAt": "2026-10-30T20:51:23.986Z",
+   "streets": 382,
+   "addresses": 99,
+   "addressSources": {
+    "osm": 99
+   },
+   "numbered": 0.81,
+   "numberedFromRanges": 0.78,
+   "stations": 1,
+   "stationsFrom": "openstreetmap",
+   "districts": "estimated",
+   "landmarks": 14
   },
   {
    "slug": "plano-tx",
