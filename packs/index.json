@@ -1,0 +1,48 @@
+{
+ "version": 1,
+ "updatedAt": "2026-10-30T19:23:41.495Z",
+ "cities": [
+  {
+   "slug": "garland-tx",
+   "name": "Garland",
+   "state": "TX",
+   "label": "Garland, TX",
+   "file": "garland-tx.json",
+   "bytes": 5686519,
+   "generatedAt": "2026-10-30T19:23:22.688Z",
+   "streets": 2569,
+   "addresses": 65422,
+   "addressSources": {
+    "nad": 65025,
+    "osm": 397
+   },
+   "numbered": 0.88,
+   "numberedFromRanges": 0.27,
+   "stations": 11,
+   "stationsFrom": "department",
+   "districts": "estimated",
+   "landmarks": 168
+  },
+  {
+   "slug": "plano-tx",
+   "name": "Plano",
+   "state": "TX",
+   "label": "Plano, TX",
+   "file": "plano-tx.json",
+   "bytes": 4478951,
+   "generatedAt": "2026-10-30T19:23:25.304Z",
+   "streets": 3971,
+   "addresses": 11209,
+   "addressSources": {
+    "nad": 32,
+    "osm": 11177
+   },
+   "numbered": 0.77,
+   "numberedFromRanges": 0.67,
+   "stations": 13,
+   "stationsFrom": "department",
+   "districts": "estimated",
+   "landmarks": 211
+  }
+ ]
+}
