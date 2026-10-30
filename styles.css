@@ -242,6 +242,7 @@ h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.3; font-weight: 700; lette
 .doc li { margin-bottom: 6px; }
 .doc li::marker { color: var(--muted); }
 .doc strong { color: var(--text); font-weight: 600; }
+.doc code { font: 600 0.9em/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--text); }
 .doc .faq { margin-top: 4px; }
 .email { font-weight: 600; color: var(--text); user-select: all; }
 

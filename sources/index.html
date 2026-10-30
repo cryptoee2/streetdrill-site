@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; style-src 'self'; script-src 'self' https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <title>StreetDrill Data Sources</title>
 <meta name="description" content="Every public data source behind StreetDrill's map of Richardson, Texas, with links to each one. StreetDrill is not affiliated with the City of Richardson or Richardson Fire Department.">
 <link rel="canonical" href="https://streetdrill.app/sources/">
@@ -101,6 +101,7 @@
     </nav>
   </div>
 </footer>
+<script src="/analytics.js" defer></script>
 <script src="/site.js" defer></script>
 </body>
 </html>

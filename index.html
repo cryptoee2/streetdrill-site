@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; style-src 'self'; script-src 'self' https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <title>StreetDrill: street study for Richardson firefighters</title>
 <meta name="description" content="StreetDrill teaches Richardson firefighters the city: real calls from quarters, hundred blocks, cross streets, target hazards and the driver/engineer map test. Works offline on iPhone.">
 <link rel="canonical" href="https://streetdrill.app/">
@@ -317,7 +317,7 @@
         <div class="card">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.02Q11.16 17.02 10.57 16.43Q9.98 15.84 9.98 15Q9.98 14.16 10.57 13.57Q11.16 12.98 12 12.98Q12.84 12.98 13.43 13.57Q14.02 14.16 14.02 15Q14.02 15.84 13.43 16.43Q12.84 17.02 12 17.02ZM18 20.02L18 9.98L6 9.98L6 20.02L18 20.02ZM18 8.02Q18.84 8.02 19.43 8.6Q20.02 9.19 20.02 9.98L20.02 20.02Q20.02 20.81 19.43 21.4Q18.84 21.98 18 21.98L6 21.98Q5.16 21.98 4.57 21.4Q3.98 20.81 3.98 20.02L3.98 9.98Q3.98 9.19 4.57 8.6Q5.16 8.02 6 8.02L6.98 8.02L6.98 6Q6.98 4.64 7.66 3.49Q8.34 2.34 9.49 1.66Q10.64 0.98 12 0.98Q13.36 0.98 14.51 1.66Q15.66 2.34 16.34 3.49Q17.02 4.64 17.02 6L17.02 8.02L18 8.02ZM12 3Q10.73 3 9.87 3.87Q9 4.73 9 6L9 8.02L15 8.02L15 6Q15 4.73 14.13 3.87Q13.27 3 12 3Z"/></svg>
           <h3>Private by design</h3>
-          <p>No location, no ads, no tracking. Your progress stays on your phone.</p>
+          <p>The app uses no location, no ads and no tracking. Your progress stays on your phone.</p>
         </div>
         <div class="card">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.02 9L12.98 9L12.98 6.98L11.02 6.98L11.02 9ZM12 20.02Q9.84 20.02 7.99 18.94Q6.14 17.86 5.06 16.01Q3.98 14.16 3.98 12Q3.98 9.84 5.06 7.99Q6.14 6.14 7.99 5.06Q9.84 3.98 12 3.98Q14.16 3.98 16.01 5.06Q17.86 6.14 18.94 7.99Q20.02 9.84 20.02 12Q20.02 14.16 18.94 16.01Q17.86 17.86 16.01 18.94Q14.16 20.02 12 20.02ZM12 2.02Q10.03 2.02 8.18 2.77Q6.33 3.52 4.92 4.92Q3.52 6.33 2.77 8.18Q2.02 10.03 2.02 12Q2.02 13.97 2.77 15.82Q3.52 17.67 4.92 19.08Q6.33 20.48 8.18 21.23Q10.03 21.98 12 21.98Q13.97 21.98 15.82 21.23Q17.67 20.48 19.08 19.08Q20.48 17.67 21.23 15.82Q21.98 13.97 21.98 12Q21.98 10.03 21.23 8.18Q20.48 6.33 19.08 4.92Q17.67 3.52 15.82 2.77Q13.97 2.02 12 2.02ZM11.02 17.02L12.98 17.02L12.98 11.02L11.02 11.02L11.02 17.02Z"/></svg>
@@ -384,7 +384,7 @@
         </details>
         <details>
           <summary>Does StreetDrill track my location?</summary>
-          <div class="answer"><p>No. It never uses your location, and your progress stays on your phone. No ads, no tracking. <a href="/privacy/">Read the privacy policy</a>.</p></div>
+          <div class="answer"><p>No. The app never uses your location, and your progress stays on your phone, with no ads and no tracking. This website counts visits with Google Analytics; <a href="/privacy/#website">the privacy policy</a> explains what that records.</p></div>
         </details>
         <details>
           <summary>What does it cost?</summary>
@@ -430,6 +430,7 @@
     </nav>
   </div>
 </footer>
+<script src="/analytics.js" defer></script>
 <script src="/site.js" defer></script>
 </body>
 </html>

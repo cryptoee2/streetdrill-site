@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; style-src 'self'; script-src 'self' https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <title>StreetDrill Privacy Policy</title>
 <meta name="description" content="StreetDrill runs on your phone: what it stores there, the little that ever leaves it, and how to delete it.">
 <link rel="canonical" href="https://streetdrill.app/privacy/">
@@ -40,7 +40,7 @@
   <header>
     <h1>Privacy Policy</h1>
     <p class="updated">Last updated October 29, 2026</p>
-    <p class="lede">StreetDrill is a street study app that runs entirely on your phone. There's no account server and no tracking. This page explains what the app keeps on your phone, the little that ever leaves it, and how to delete it all.</p>
+    <p class="lede">StreetDrill is a street study app that runs entirely on your phone, with no account server and no tracking. This page explains what the app keeps on your phone, the little that ever leaves it, how this website counts visits, and how to delete it all.</p>
   </header>
 
   <nav class="toc" aria-label="On this page">
@@ -49,6 +49,7 @@
       <li><a href="#stored">What stays on your phone</a></li>
       <li><a href="#not-collected">What we don't collect</a></li>
       <li><a href="#leaves">What leaves your phone</a></li>
+      <li><a href="#website">This website</a></li>
       <li><a href="#providers">Who helps us</a></li>
       <li><a href="#delete-data">Delete your data</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -95,8 +96,13 @@
     <p>If you email us, for tester access or support, we receive your address and whatever you write, and use them to reply and to set up your tester access.</p>
     <h3>App updates</h3>
     <p>StreetDrill can download updates from Expo's update service. Like any download, that request includes your phone's IP address and technical details the update check needs, such as the app version, the platform and an anonymous install ID. It never includes your progress or anything you type.</p>
-    <h3>This website</h3>
-    <p>streetdrill.app sets no cookies and runs no analytics or trackers. Like any website, our hosting provider sees your IP address when you visit.</p>
+  </section>
+
+  <section>
+    <h2 id="website">This website</h2>
+    <p>streetdrill.app uses <strong>Google Analytics</strong> to count visits and see what's working. It records the pages you view, how you got here (a search or a link, for example), your browser and type of device, your approximate location (the city, worked out from your IP address, which Google Analytics doesn't keep) and taps on the tester-access and "my city" email links.</p>
+    <p>To tell visits apart without knowing who you are, it sets Google Analytics cookies (<code>_ga</code> and <code>_ga_</code> followed by an id) and keeps a random visitor id (<code>lytics_vid</code>) in your browser's storage. None of it is used for advertising. Google explains <a href="https://policies.google.com/technologies/partner-sites">how it uses information from sites that use its services</a>.</p>
+    <p>To browse without it, block cookies or scripts from Google in your browser or with a content blocker, or use Google's <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a>. Like any website, our web host also sees your IP address when you visit.</p>
   </section>
 
   <section>
@@ -109,6 +115,7 @@
           <tr><td>Apple</td><td>Delivers StreetDrill through TestFlight and the App Store</td><td>What Apple normally receives when you install and use a test or App Store app</td></tr>
           <tr><td>Expo</td><td>Delivers app updates, and runs Expo Go if you test StreetDrill inside it</td><td>The technical details of each update check; your Expo account if you use Expo Go</td></tr>
           <tr><td>Our email provider</td><td>Receives the email you send us</td><td>Your email address and message</td></tr>
+          <tr><td>Google</td><td>Google Analytics: counts visits to streetdrill.app</td><td>What <a href="#website">This website</a> describes: pages viewed, how you arrived, device and browser, approximate location, the cookies and the random visitor id</td></tr>
           <tr><td>Our web host</td><td>Serves streetdrill.app</td><td>Standard server logs, such as your IP address</td></tr>
         </tbody>
       </table>
@@ -121,6 +128,7 @@
     <ul>
       <li>What's on your phone stays there until you reset your progress or delete the app.</li>
       <li>Tester reports and emails you send us are kept while StreetDrill is in testing, then deleted when we no longer need them. You can ask us to delete yours at any time.</li>
+      <li>Website visit data is kept in Google Analytics for up to 14 months.</li>
     </ul>
   </section>
 
@@ -139,6 +147,7 @@
     <h2 id="rights">Your choices</h2>
     <ul>
       <li>You decide whether to send a tester report, and you can read it before you do.</li>
+      <li>You can browse streetdrill.app without Google Analytics, as <a href="#website">This website</a> explains.</li>
       <li>You can ask us for a copy of what we hold about you, or to correct or delete it, at <span class="email">support@streetdrill.app</span>. Depending on where you live, you may have further rights under local law; we'll honor them.</li>
     </ul>
   </section>
@@ -176,6 +185,7 @@
     </nav>
   </div>
 </footer>
+<script src="/analytics.js" defer></script>
 <script src="/site.js" defer></script>
 </body>
 </html>
