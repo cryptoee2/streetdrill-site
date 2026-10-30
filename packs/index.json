@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-30T21:09:40.211Z",
+ "updatedAt": "2026-10-30T21:18:06.503Z",
  "cities": [
   {
    "slug": "garland-tx",
@@ -50,16 +50,16 @@
    "state": "TX",
    "label": "Plano, TX",
    "file": "plano-tx.json",
-   "bytes": 4571982,
-   "generatedAt": "2026-10-30T21:01:11.529Z",
+   "bytes": 7377395,
+   "generatedAt": "2026-10-30T21:17:56.535Z",
    "streets": 3971,
-   "addresses": 13337,
+   "addresses": 78056,
    "addressSources": {
-    "nad": 2164,
-    "osm": 11173
+    "city": 77873,
+    "nad": 183
    },
-   "numbered": 0.77,
-   "numberedFromRanges": 0.65,
+   "numbered": 0.8,
+   "numberedFromRanges": 0.21,
    "stations": 13,
    "stationsFrom": "department",
    "districts": "estimated",
