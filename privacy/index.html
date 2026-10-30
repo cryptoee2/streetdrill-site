@@ -39,8 +39,8 @@
 <main class="doc">
   <header>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated October 29, 2026</p>
-    <p class="lede">StreetDrill is a street study app that runs entirely on your phone, with no account server and no tracking. This page explains what the app keeps on your phone, the little that ever leaves it, how this website counts visits, and how to delete it all.</p>
+    <p class="updated">Last updated October 30, 2026</p>
+    <p class="lede">StreetDrill is a street study app that runs on your phone, with no account server and no tracking. This page explains what the app keeps on your phone, the little that leaves it (such as downloading your city), how this website counts visits, and how to delete it all.</p>
   </header>
 
   <nav class="toc" aria-label="On this page">
@@ -66,22 +66,22 @@
     <p>StreetDrill saves these on your phone so it can work offline. They aren't sent to us or anyone else.</p>
     <h3>Your sign-in</h3>
     <ul>
-      <li>The <strong>name</strong> you enter, your <strong>Tester ID</strong> and what you're studying for (for example, driver promotion). Your access code is checked on the phone; there's no server to send it to.</li>
+      <li>The <strong>name</strong> you enter, or the <strong>id, name and email</strong> of the Apple or Google account you continue with, and what you're studying for (for example, driver promotion). For beta testers, the <strong>Tester ID</strong>; access codes are checked on the phone. There's no account server: these only tell people apart on that phone, and each person's progress is kept separately.</li>
     </ul>
     <h3>Your settings</h3>
     <ul>
-      <li>Your <strong>home base</strong> (a fire station or an address you choose), study area, difficulty, and voice, sound, haptics and appearance choices.</li>
+      <li>Your <strong>city</strong> and the cities you've downloaded, your <strong>home base</strong> (a fire station or an address you choose), study area, difficulty, and voice, sound, haptics and appearance choices.</li>
     </ul>
     <h3>Your progress</h3>
     <ul>
-      <li>XP, level and streak, stats for each game, how well you know each street, hazard and block, your session history, and the <strong>ratings and notes</strong> you give each game.</li>
+      <li>XP, level and streak, stats for each game, how well you know each street, hazard and block, your session history and route book, and the <strong>ratings and notes</strong> you give each game, kept separately for each city.</li>
     </ul>
   </section>
 
   <section>
     <h2 id="not-collected">What we don't collect</h2>
     <ul>
-      <li>StreetDrill does <strong>not</strong> use your phone's location. The map, your station and every address are part of the app.</li>
+      <li>StreetDrill uses your phone's location only when you ask it to, and <strong>never keeps it</strong>. <strong>Use my location</strong> in city setup finds the city you're in: your phone's own map service (Apple's or Google's) turns the position into a place name, and StreetDrill keeps only the city. <strong>Glance</strong> shows the street you're on while it's open, worked out on the phone; nothing is sent anywhere.</li>
       <li>It doesn't access your contacts, photos, camera or microphone. The dispatcher voice is made on your phone.</li>
       <li>The app contains <strong>no advertising and no analytics or tracking tools</strong>.</li>
       <li>We <strong>never sell</strong> your information or share it for advertising.</li>
@@ -90,8 +90,14 @@
 
   <section>
     <h2 id="leaves">What leaves your phone</h2>
+    <h3>Your city</h3>
+    <p>The app downloads your city's map from streetdrill.app. If you ask for a city that isn't built yet, it sends the city's name and state to our city builder at api.streetdrill.app, which builds the city on GitHub and adds it to the list for everyone, with nothing about who asked. To limit requests to three new cities per internet connection a day, the city builder keeps a count for each IP address for two days.</p>
+    <h3>Signing in with Apple or Google</h3>
+    <p>Apple or Google confirms your account and gives the app its id, name and email, which stay on your phone. StreetDrill doesn't send them anywhere.</p>
     <h3>Your tester report, when you send it</h3>
     <p>In <strong>Progress</strong>, <strong>Share tester report</strong> opens your phone's share sheet with a report you can read first: your name, Tester ID and role, your rating and notes for each game, sessions, accuracy and weakest streets. It goes only where you send it, usually a text or email to us. We use it to improve StreetDrill.</p>
+    <h3>Backups, when you make one</h3>
+    <p><strong>Back up progress</strong> shares your progress as text, wherever you choose to send it, so you can restore it on another phone.</p>
     <h3>Emails you send us</h3>
     <p>If you email us, for tester access or support, we receive your address and whatever you write, and use them to reply and to set up your tester access.</p>
     <h3>App updates</h3>
@@ -102,7 +108,7 @@
     <h2 id="website">This website</h2>
     <p>streetdrill.app uses <strong>Google Analytics</strong> to count visits and see what's working. It records the pages you view, how you got here (a search or a link, for example), your browser and type of device, your approximate location (the city, worked out from your IP address, which Google Analytics doesn't keep) and taps on the tester-access and "my city" email links.</p>
     <p>To tell visits apart without knowing who you are, it sets Google Analytics cookies (<code>_ga</code> and <code>_ga_</code> followed by an id) and keeps a random visitor id (<code>lytics_vid</code>) in your browser's storage. None of it is used for advertising. Google explains <a href="https://policies.google.com/technologies/partner-sites">how it uses information from sites that use its services</a>.</p>
-    <p>To browse without it, block cookies or scripts from Google in your browser or with a content blocker, or use Google's <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a>. Like any website, our web host also sees your IP address when you visit.</p>
+    <p>To browse without it, block cookies or scripts from Google in your browser or with a content blocker, or use Google's <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a>. Like any website, our web host (GitHub) also sees your IP address when you visit.</p>
   </section>
 
   <section>
@@ -112,11 +118,12 @@
       <table>
         <thead><tr><th>Provider</th><th>What they do</th><th>What they receive</th></tr></thead>
         <tbody>
-          <tr><td>Apple</td><td>Delivers StreetDrill through TestFlight and the App Store</td><td>What Apple normally receives when you install and use a test or App Store app</td></tr>
+          <tr><td>Apple</td><td>Delivers StreetDrill through TestFlight and the App Store, runs Sign in with Apple, and on iPhone turns your position into a city name when you use your location</td><td>What Apple normally receives when you install and use an app, your sign-in if you continue with Apple, and your position only for <strong>Use my location</strong></td></tr>
           <tr><td>Expo</td><td>Delivers app updates, and runs Expo Go if you test StreetDrill inside it</td><td>The technical details of each update check; your Expo account if you use Expo Go</td></tr>
           <tr><td>Our email provider</td><td>Receives the email you send us</td><td>Your email address and message</td></tr>
-          <tr><td>Google</td><td>Google Analytics: counts visits to streetdrill.app</td><td>What <a href="#website">This website</a> describes: pages viewed, how you arrived, device and browser, approximate location, the cookies and the random visitor id</td></tr>
-          <tr><td>Our web host</td><td>Serves streetdrill.app</td><td>Standard server logs, such as your IP address</td></tr>
+          <tr><td>Google</td><td>Runs Sign in with Google and Google Analytics for streetdrill.app, and on Android turns your position into a city name when you use your location</td><td>Your sign-in if you continue with Google, what <a href="#website">This website</a> describes, and your position only for <strong>Use my location</strong></td></tr>
+          <tr><td>Cloudflare</td><td>Runs the city builder at api.streetdrill.app</td><td>The name and state of a city you ask for, and your IP address</td></tr>
+          <tr><td>GitHub</td><td>Hosts streetdrill.app and the city downloads, and builds cities on request</td><td>Standard server logs, such as your IP address, and the names of cities being built</td></tr>
         </tbody>
       </table>
     </div>
@@ -129,6 +136,7 @@
       <li>What's on your phone stays there until you reset your progress or delete the app.</li>
       <li>Tester reports and emails you send us are kept while StreetDrill is in testing, then deleted when we no longer need them. You can ask us to delete yours at any time.</li>
       <li>Website visit data is kept in Google Analytics for up to 14 months.</li>
+      <li>The city builder's counts of requests per IP address expire after two days.</li>
     </ul>
   </section>
 
@@ -176,7 +184,7 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by the City of Richardson or Richardson Fire Department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
+    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
     <nav aria-label="Footer">
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>

@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; style-src 'self'; script-src 'self' https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <title>StreetDrill Data Sources</title>
-<meta name="description" content="Every public data source behind StreetDrill's map of Richardson, Texas, with links to each one. StreetDrill is not affiliated with the City of Richardson or Richardson Fire Department.">
+<meta name="description" content="Every public data source behind StreetDrill's city maps, with links to each one. StreetDrill is not affiliated with any city or fire department.">
 <link rel="canonical" href="https://streetdrill.app/sources/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://streetdrill.app/sources/">
 <meta property="og:title" content="StreetDrill Data Sources">
-<meta property="og:description" content="Every public data source behind StreetDrill's map of Richardson, Texas, with links to each one. StreetDrill is not affiliated with the City of Richardson or Richardson Fire Department.">
+<meta property="og:description" content="Every public data source behind StreetDrill's city maps, with links to each one. StreetDrill is not affiliated with any city or fire department.">
 <meta property="og:image" content="https://streetdrill.app/images/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -39,19 +39,29 @@
 <main class="doc">
   <header>
     <h1>Data sources</h1>
-    <p class="updated">Map data as of October 29, 2026</p>
-    <p class="lede">StreetDrill's map of Richardson is built from public data. Here's every source, with a link to each one, and what the map doesn't cover yet.</p>
+    <p class="updated">Updated October 30, 2026</p>
+    <p class="lede">StreetDrill's city maps are built from public data. Here's every source, with a link to each one, and what the maps don't cover yet.</p>
   </header>
 
   <section>
     <div class="callout">
-      <h2>Not a City or fire department app</h2>
-      <p>StreetDrill is an independent study aid made by Hantis USA, LLC. It is not affiliated with, endorsed by, or acting for the City of Richardson, Richardson Fire Department or any other agency. Map data can be incomplete or out of date: your department's maps, CAD and SOGs always come first.</p>
+      <h2>Not a city or fire department app</h2>
+      <p>StreetDrill is an independent study aid made by Hantis USA, LLC. It is not affiliated with, endorsed by, or acting for any city, fire department or other agency. Map data can be incomplete or out of date: your department's maps, CAD and SOGs always come first.</p>
     </div>
   </section>
 
   <section>
-    <h2>City of Richardson open data</h2>
+    <h2>Every city</h2>
+    <ul class="sources">
+      <li><span>OpenStreetMap: streets, one-ways, signals, city limits and places</span><a href="https://www.openstreetmap.org/copyright" rel="nofollow noopener">openstreetmap.org</a></li>
+      <li><span>National Address Database: address points (US DOT)</span><a href="https://www.transportation.gov/gis/national-address-database" rel="nofollow noopener">transportation.gov</a></li>
+      <li><span>TIGER/Line address ranges: house numbers along streets (US Census Bureau)</span><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" rel="nofollow noopener">census.gov</a></li>
+    </ul>
+    <p>Map data &copy; OpenStreetMap contributors, available under the Open Database License (ODbL). The National Address Database and the Census Bureau's TIGER/Line files are public domain. The National Address Database covers only the counties that contribute to it; where a street has no address points, its house numbers come from the Census ranges.</p>
+  </section>
+
+  <section>
+    <h2>Richardson: City of Richardson open data</h2>
     <ul class="sources">
       <li><span>Address points: 31,722 building addresses</span><a href="https://maps.cor.gov/arcgis/rest/services/OpenData/AddressPoints/MapServer/0" rel="nofollow noopener">maps.cor.gov</a></li>
       <li><span>Street dual centerlines: official street names</span><a href="https://maps.cor.gov/arcgis/rest/services/OpenData/StreetsDualCenterlines/MapServer/0" rel="nofollow noopener">maps.cor.gov</a></li>
@@ -59,19 +69,14 @@
       <li><span>City limits</span><a href="https://maps.cor.gov/arcgis/rest/services/AdministrativeArea/CityLimits/MapServer/0" rel="nofollow noopener">maps.cor.gov</a></li>
       <li><span>City of Richardson Open Data Hub</span><a href="https://opendata-richardson.opendata.arcgis.com" rel="nofollow noopener">opendata-richardson.opendata.arcgis.com</a></li>
     </ul>
+    <p>Richardson's map uses the city's own address points, and its official street names are matched onto the OpenStreetMap streets.</p>
   </section>
 
   <section>
-    <h2>OpenStreetMap</h2>
-    <ul class="sources">
-      <li><span>Street network: geometry, one-ways and traffic signals</span><a href="https://www.openstreetmap.org/copyright" rel="nofollow noopener">openstreetmap.org</a></li>
-    </ul>
-    <p>Map data &copy; OpenStreetMap contributors, available under the Open Database License (ODbL). The City's official street names are matched onto the OpenStreetMap streets.</p>
-  </section>
-
-  <section>
-    <h2>Stations and target hazards</h2>
-    <p>The six fire stations and their apparatus come from City GIS address points and the Richardson Fire Department's public station list. The 82 target hazards are a researched list of places drivers can't afford to hunt for: hospitals, schools, senior living, apartment complexes, universities, government buildings, transit and large businesses, each with its address and first-due station.</p>
+    <h2>Stations, districts and target hazards</h2>
+    <p><strong>Richardson:</strong> the six fire stations and their apparatus come from City GIS address points and the Richardson Fire Department's public station list, and the first-due areas are the official station districts. The 82 target hazards are a researched list of places drivers can't afford to hunt for, each with its address and first-due station.</p>
+    <p><strong>Garland and Plano:</strong> stations and units come from each department's published station pages. <strong>Cities built on request:</strong> stations are drafted from OpenStreetMap and shown as estimates until a department's list is added.</p>
+    <p>Outside Richardson, first-due areas are estimated by drive time from each station, and target hazards (hospitals, schools, senior living, apartment complexes, venues and more) are drafted from OpenStreetMap.</p>
   </section>
 
   <section>
@@ -80,19 +85,20 @@
   </section>
 
   <section>
-    <h2>What's not on the map yet</h2>
+    <h2>What's not on the maps yet</h2>
     <ul>
-      <li><strong>Some newer streets.</strong> About 1% of city addresses (around 280) are on streets OpenStreetMap doesn't have yet, so they're left out until it does.</li>
-      <li><strong>Fire hydrants.</strong> The City doesn't publish them as open data.</li>
-      <li><strong>Ambulance numbers.</strong> Ambulances 31 to 36 follow the "3 + station" pattern; only Ambulance 35 is confirmed in City GIS.</li>
+      <li><strong>Some addresses.</strong> In Richardson, about 1% of addresses (around 280) are on newer streets OpenStreetMap doesn't have yet. In counties that don't contribute to the National Address Database, cities rely on OpenStreetMap addresses and the Census ranges.</li>
+      <li><strong>Fire hydrants.</strong> They aren't in the open data StreetDrill uses.</li>
+      <li><strong>Stations in cities built on request.</strong> They're estimates from OpenStreetMap until a department's list is added.</li>
+      <li><strong>Ambulance numbers in Richardson.</strong> Ambulances 31 to 36 follow the "3 + station" pattern; only Ambulance 35 is confirmed in City GIS.</li>
     </ul>
-    <p>Spot something wrong? Email <a href="mailto:support@streetdrill.app?subject=Map%20data">support@streetdrill.app</a> with the address or street.</p>
+    <p>Spot something wrong, or have your department's station list? Email <a href="mailto:support@streetdrill.app?subject=Map%20data">support@streetdrill.app</a>.</p>
   </section>
 </main>
 
 <footer class="footer">
   <div class="wrap">
-    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by the City of Richardson or Richardson Fire Department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
+    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
     <nav aria-label="Footer">
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>

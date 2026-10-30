@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; style-src 'self'; script-src 'self' https://www.googletagmanager.com; font-src 'self'; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
 <title>StreetDrill Support</title>
-<meta name="description" content="Help with StreetDrill: tester access, signing in, your station and study area, the games, the map data and your progress.">
+<meta name="description" content="Help with StreetDrill: getting started, your city and station, the games, the map data and your progress.">
 <link rel="canonical" href="https://streetdrill.app/support/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://streetdrill.app/support/">
 <meta property="og:title" content="StreetDrill Support">
-<meta property="og:description" content="Help with StreetDrill: tester access, signing in, your station and study area, the games, the map data and your progress.">
+<meta property="og:description" content="Help with StreetDrill: getting started, your city and station, the games, the map data and your progress.">
 <meta property="og:image" content="https://streetdrill.app/images/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -57,11 +57,11 @@
       </details>
       <details open>
         <summary>How do I sign in?</summary>
-        <div class="answer"><p>Enter your name, then the <strong>Tester ID</strong> and <strong>access code</strong> from your invite. The code is checked on your phone, so signing in works without a signal. If it says the code doesn't match, check the Tester ID first: it's the part that looks like <span class="nw">jane-doe</span>.</p></div>
+        <div class="answer"><p>Type your name and tap <strong>Start studying</strong>, or use <strong>Continue with Apple</strong> or <strong>Continue with Google</strong> where you see them. There's no account server: the account only tells people apart on that phone. Beta testers can tap <strong>I have a beta tester invite</strong> and enter the <strong>Tester ID</strong> and <strong>access code</strong> from their invite. If it says the code doesn't match, check the Tester ID first: it looks like <span class="nw">jane-doe</span>.</p></div>
       </details>
       <details open>
-        <summary>How do I set my station?</summary>
-        <div class="answer"><p>You pick a home base when you first sign in, and can change it any time in <strong>Profile</strong> under <strong>Home base</strong>: one of the six Richardson stations, or any address. Under <strong>Study area</strong>, choose that station's first-due district, a radius around your home base, or the whole city.</p></div>
+        <summary>How do I pick my city and station?</summary>
+        <div class="answer"><p>When you first start, StreetDrill asks <strong>Where do you work?</strong> Type your city and state, or tap <strong>Use my location</strong>, then pick your station. Change them any time in <strong>Profile</strong>: <strong>City</strong> for the city, <strong>Home base</strong> for your station or any address, and <strong>Study area</strong> for that station's first-due district, a radius around your home base, or the whole city.</p></div>
       </details>
       <details open>
         <summary>What do the difficulty levels do?</summary>
@@ -73,6 +73,24 @@
           </ul>
           <p>Change it in <strong>Profile</strong> under <strong>Difficulty</strong>.</p>
         </div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <h2>Your city</h2>
+    <div class="faq">
+      <details open>
+        <summary>My city isn't on the list.</summary>
+        <div class="answer"><p>Type it in anyway, as city and state. StreetDrill builds any US city from open map data and adds it to the list for everyone. It takes 10 to 30 minutes: keep the app open and it moves onto your city when it's ready. If a build fails, the app says why, and you can try again later. To keep the builder running for everyone, each internet connection can ask for three new cities a day.</p></div>
+      </details>
+      <details open>
+        <summary>Why do some stations say they're estimates?</summary>
+        <div class="answer"><p>In a city built on request, stations come from OpenStreetMap, which often lacks station numbers, addresses and units, and first-due areas are estimated by drive time from each station. <a href="mailto:support@streetdrill.app?subject=StreetDrill%20for%20my%20city">Send us your department's station list</a> and we'll make them exact. Garland's and Plano's stations already come from their departments.</p></div>
+      </details>
+      <details open>
+        <summary>How do I switch cities?</summary>
+        <div class="answer"><p>In <strong>Profile</strong>, under <strong>City</strong>. Each city keeps its own progress and home base, so switching back picks up where you left off.</p></div>
       </details>
     </div>
   </section>
@@ -104,15 +122,15 @@
     <div class="faq">
       <details open>
         <summary>An address or street is missing.</summary>
-        <div class="answer"><p>About 1% of city addresses are on newer streets that OpenStreetMap doesn't have yet, so they're left out until it does. Email us the address and we'll look at it. <a href="/sources/">See every source</a>.</p></div>
+        <div class="answer"><p>Some addresses aren't in the open data yet. In Richardson, about 1% are on newer streets OpenStreetMap doesn't have. Elsewhere, addresses come from the National Address Database or OpenStreetMap, and where a street has none, its house numbers come from the Census Bureau's address ranges. Email us the address and we'll look at it. <a href="/sources/">See every source</a>.</p></div>
       </details>
       <details open>
         <summary>Are fire hydrants on the map?</summary>
-        <div class="answer"><p>No. The City doesn't publish hydrant locations as open data, so StreetDrill can't include them.</p></div>
+        <div class="answer"><p>No. Hydrant locations aren't in the open data StreetDrill uses.</p></div>
       </details>
       <details open>
-        <summary>Is StreetDrill made by the City or the fire department?</summary>
-        <div class="answer"><p>No. StreetDrill is an independent study aid made by Hantis USA, LLC. It isn't affiliated with or endorsed by the City of Richardson or Richardson Fire Department. Always follow your department's SOGs, and verify routes before relying on them.</p></div>
+        <summary>Is StreetDrill made by a city or fire department?</summary>
+        <div class="answer"><p>No. StreetDrill is an independent study aid made by Hantis USA, LLC. It isn't affiliated with or endorsed by any city or fire department. Always follow your department's SOGs, and verify routes before relying on them.</p></div>
       </details>
     </div>
   </section>
@@ -122,7 +140,7 @@
     <div class="faq">
       <details open>
         <summary>Where is my progress saved?</summary>
-        <div class="answer"><p>On your phone, and nowhere else. StreetDrill has no account server, and it never uses your location. <a href="/privacy/">Read the privacy policy</a>.</p></div>
+        <div class="answer"><p>On your phone, and nowhere else: StreetDrill has no account server. To move to a new phone, use <strong>Back up progress</strong> in <strong>Progress</strong>, then <strong>Restore from a backup</strong> on the new one. StreetDrill uses your location only to find your city when you ask and while Glance is open, and keeps only the city name. <a href="/privacy/">Read the privacy policy</a>.</p></div>
       </details>
       <details open>
         <summary>What's in the tester report?</summary>
@@ -133,8 +151,8 @@
         <div class="answer"><p>In <strong>Progress</strong>, tap <strong>Reset progress</strong>. That clears XP, your streak, game stats, mastery, history and ratings on that phone. Deleting the app removes everything. <a href="/privacy/#delete-data">More about your data</a>.</p></div>
       </details>
       <details open>
-        <summary>I signed out. Is my progress gone?</summary>
-        <div class="answer"><p>No. It stays on the phone until a different Tester ID signs in there. Sign back in with the same Tester ID to pick up where you left off.</p></div>
+        <summary>Can several people share one phone?</summary>
+        <div class="answer"><p>Yes, like a station iPad. Each person's progress is kept apart: the first screen lists everyone who has studied on it, and <strong>Profile</strong> &rsaquo; <strong>Switch person</strong> goes back to that list.</p></div>
       </details>
     </div>
   </section>
@@ -142,7 +160,7 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by the City of Richardson or Richardson Fire Department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
+    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
     <nav aria-label="Footer">
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>
