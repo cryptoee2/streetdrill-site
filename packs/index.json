@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-10-30T20:51:24.927Z",
+ "updatedAt": "2026-10-30T21:01:32.359Z",
  "cities": [
   {
    "slug": "garland-tx",
@@ -8,16 +8,16 @@
    "state": "TX",
    "label": "Garland, TX",
    "file": "garland-tx.json",
-   "bytes": 5686519,
-   "generatedAt": "2026-10-30T19:23:22.688Z",
+   "bytes": 5895256,
+   "generatedAt": "2026-10-30T21:00:41.010Z",
    "streets": 2569,
-   "addresses": 65422,
+   "addresses": 70290,
    "addressSources": {
-    "nad": 65025,
-    "osm": 397
+    "nad": 70077,
+    "osm": 213
    },
-   "numbered": 0.88,
-   "numberedFromRanges": 0.27,
+   "numbered": 0.89,
+   "numberedFromRanges": 0.2,
    "stations": 11,
    "stationsFrom": "department",
    "districts": "estimated",
@@ -49,16 +49,16 @@
    "state": "TX",
    "label": "Plano, TX",
    "file": "plano-tx.json",
-   "bytes": 4478951,
-   "generatedAt": "2026-10-30T19:23:25.304Z",
+   "bytes": 4571982,
+   "generatedAt": "2026-10-30T21:01:11.529Z",
    "streets": 3971,
-   "addresses": 11209,
+   "addresses": 13337,
    "addressSources": {
-    "nad": 32,
-    "osm": 11177
+    "nad": 2164,
+    "osm": 11173
    },
    "numbered": 0.77,
-   "numberedFromRanges": 0.67,
+   "numberedFromRanges": 0.65,
    "stations": 13,
    "stationsFrom": "department",
    "districts": "estimated",
