@@ -94,6 +94,13 @@ a:hover { text-decoration-color: var(--text); }
 .btn svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
 .btn.big { padding: 16px 26px; font-size: 17px; border-radius: 14px; }
 .btn.block { display: flex; width: 100%; padding: 15px 22px; font-size: 16px; }
+.btn.alt { background: var(--surface-2); border: 1px solid var(--line); }
+.btn.alt:hover { background: var(--line); }
+.stores { display: grid; gap: 10px; }
+/* the launch offer: the first 100 sign-ins get StreetDrill free for life (no counter, on purpose) */
+.offer { margin: 0 0 18px; padding: 14px 16px; border-radius: 14px; background: var(--red-soft); border: 1px solid rgba(229, 56, 59, 0.35); color: var(--text-2); font-size: 15px; line-height: 1.45; }
+.offer strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 2px; }
+.offer-line { margin: 18px 0 0; color: var(--text); font-weight: 600; font-size: 16px; }
 .get { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
 
 /* Not on the App Store yet: a label, not a button. The green dot means it's live for testers. */
