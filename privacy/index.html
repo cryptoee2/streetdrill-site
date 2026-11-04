@@ -91,15 +91,15 @@
   <section>
     <h2 id="leaves">What leaves your phone</h2>
     <h3>Your city</h3>
-    <p>The app downloads your city's map from streetdrill.app. If you ask for a city that isn't built yet, it sends the city's name and state to our city builder at api.streetdrill.app, which builds the city on GitHub and adds it to the list for everyone, with nothing about who asked. To limit requests to three new cities per internet connection a day, the city builder keeps a count for each IP address for two days.</p>
+    <p>The app downloads your city's map from our server at api.streetdrill.app. If you ask for a city that isn't built yet, it sends the city's name and state to our city builder at api.streetdrill.app, which builds the city on GitHub and adds it to the list for everyone, with nothing about who asked. To limit requests to three new cities per internet connection a day, the city builder keeps a count for each IP address for two days.</p>
     <h3>Signing in with Apple or Google</h3>
     <p>Apple or Google confirms your account and gives the app its id, name and email, which stay on your phone.</p>
     <p>Some accounts get StreetDrill free: beta testers, and the first people to sign in. To check yours, the app sends the sign-in's signed token, which Apple or Google issued for StreetDrill, to our server at api.streetdrill.app, together with the app's anonymous purchase ID (see <a href="#buying">Buying StreetDrill</a>). The server checks the token with Apple or Google and compares its email with our tester list. It keeps your account's id only if that account gets free access, so the same account keeps it on any phone. It doesn't keep your name or email.</p>
 
     <h3 id="buying">Buying StreetDrill</h3>
     <p>The one-time purchase that unlocks StreetDrill goes through the App Store or Google Play. We never see your card or payment details. RevenueCat, which checks purchases for us, receives the purchase record from Apple or Google and an anonymous ID the app makes for this install, so it can confirm the purchase and bring it back with <strong>Restore purchases</strong> on another phone. If your account gets free access, our server records that with RevenueCat under the same anonymous ID.</p>
-    <h3>Your tester report, when you send it</h3>
-    <p>In <strong>Progress</strong>, <strong>Share tester report</strong> opens your phone's share sheet with a report you can read first: your name, Tester ID and role, your rating and notes for each game, sessions, accuracy and weakest streets. It goes only where you send it, usually a text or email to us. We use it to improve StreetDrill.</p>
+    <h3>Your progress report, when you send it</h3>
+    <p>In <strong>Progress</strong>, <strong>Share progress report</strong> opens your phone's share sheet with a report you can read first: your name, Tester ID and role, your rating and notes for each game, sessions, accuracy and weakest streets, and the questions you flagged. It goes only where you send it, usually a text or email to us. We use it to improve StreetDrill.</p>
     <h3>Map problem reports, when you send one</h3>
     <p><strong>Report a map problem</strong> (in <strong>Profile</strong>, or the flag on a station or street on the map) sends what you pick and write, such as the station or street and the right number or address, to our server at api.streetdrill.app, which emails it to us at support@streetdrill.app. With it go your city, department and study area, your home base if it's a fire station, the date of the map data, and the app version and type of phone, so we can find the problem in the map you saw. It doesn't include your name, email or location. To keep junk out, the server counts the reports from each internet connection for two days, under a one-way code made from the IP address rather than the address itself. If the app can't reach the server, it opens the report in your mail app instead, and you send it yourself. We use reports only to fix the map.</p>
     <h3>Backups, when you make one</h3>
@@ -128,9 +128,9 @@
           <tr><td>Expo</td><td>Delivers app updates, and runs Expo Go if you test StreetDrill inside it</td><td>The technical details of each update check; your Expo account if you use Expo Go</td></tr>
           <tr><td>Our email provider</td><td>Receives the email you send us, and the map problem reports our server sends us</td><td>Your email address and message, and the reports</td></tr>
           <tr><td>Google</td><td>Delivers StreetDrill through Google Play and takes payment for the in-app purchase there, runs Sign in with Google and Google Analytics for streetdrill.app, and on Android turns your position into a city name when you use your location</td><td>Your sign-in if you continue with Google, what <a href="#website">This website</a> describes, and your position only for <strong>Use my location</strong></td></tr>
-          <tr><td>Cloudflare</td><td>Runs our server at api.streetdrill.app: the city builder, the free-access check, and map problem reports, which it emails to us</td><td>The name and state of a city you ask for, your sign-in token and anonymous purchase ID when you sign in, the account id it keeps for free access, the map problem reports you send, and your IP address</td></tr>
+          <tr><td>Cloudflare</td><td>Runs our server at api.streetdrill.app: the city downloads, the city builder, the free-access check, and map problem reports, which it emails to us</td><td>The name and state of a city you ask for, your sign-in token and anonymous purchase ID when you sign in, the account id it keeps for free access, the map problem reports you send, and your IP address</td></tr>
           <tr><td>RevenueCat</td><td>Checks and restores the in-app purchase, and records free access</td><td>The purchase record from Apple or Google and the app's anonymous purchase ID</td></tr>
-          <tr><td>GitHub</td><td>Hosts streetdrill.app and the city downloads, and builds cities on request</td><td>Standard server logs, such as your IP address, and the names of cities being built</td></tr>
+          <tr><td>GitHub</td><td>Hosts streetdrill.app (and the city downloads of early test builds), and builds cities on request</td><td>Standard server logs, such as your IP address, and the names of cities being built</td></tr>
         </tbody>
       </table>
     </div>
@@ -141,7 +141,7 @@
     <h2 id="retention">How long we keep it</h2>
     <ul>
       <li>What's on your phone stays there until you reset your progress or delete the app.</li>
-      <li>Tester reports and emails you send us are kept while StreetDrill is in testing, then deleted when we no longer need them. You can ask us to delete yours at any time.</li>
+      <li>Progress reports and emails you send us are kept while StreetDrill is in testing, then deleted when we no longer need them. You can ask us to delete yours at any time.</li>
       <li>Website visit data is kept in Google Analytics for up to 14 months.</li>
       <li>Map problem reports are kept until the problem is fixed, then deleted when we no longer need them.</li>
       <li>The server's counts of city requests and map problem reports per internet connection expire after two days.</li>
@@ -164,7 +164,7 @@
   <section>
     <h2 id="rights">Your choices</h2>
     <ul>
-      <li>You decide whether to send a tester report, and you can read it before you do.</li>
+      <li>You decide whether to send a progress report, and you can read it before you do.</li>
       <li>You can browse streetdrill.app without Google Analytics, as <a href="#website">This website</a> explains.</li>
       <li>You can ask us for a copy of what we hold about you, or to correct or delete it, at <span class="email">support@streetdrill.app</span>. Depending on where you live, you may have further rights under local law; we'll honor them.</li>
     </ul>

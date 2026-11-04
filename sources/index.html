@@ -39,7 +39,7 @@
 <main class="doc">
   <header>
     <h1>Data sources</h1>
-    <p class="updated">Updated October 30, 2026</p>
+    <p class="updated">Updated November 4, 2026</p>
     <p class="lede">StreetDrill's city maps are built from public data. Here's every source, with a link to each one, and what the maps don't cover yet.</p>
   </header>
 
@@ -57,6 +57,8 @@
       <li><span>National Address Database: address points (US DOT)</span><a href="https://www.transportation.gov/gis/national-address-database" rel="nofollow noopener">transportation.gov</a></li>
       <li><span>OpenAddresses: county and city address points, via Overture Maps (each city's list is in the app)</span><a href="https://openaddresses.io/" rel="nofollow noopener">openaddresses.io</a></li>
       <li><span>TIGER/Line address ranges: house numbers along streets (US Census Bureau)</span><a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html" rel="nofollow noopener">census.gov</a></li>
+      <li><span>NERIS: fire departments' station lists, used to check station numbers and addresses (US Fire Administration)</span><a href="https://neris.fsri.org/" rel="nofollow noopener">neris.fsri.org</a></li>
+      <li><span>Census Geocoder: map positions for stations added from public station listings (US Census Bureau)</span><a href="https://geocoding.geo.census.gov/" rel="nofollow noopener">census.gov</a></li>
     </ul>
     <p>Map data &copy; OpenStreetMap contributors, available under the Open Database License (ODbL). The National Address Database and the Census Bureau's TIGER/Line files are public domain. The National Address Database covers only the counties that contribute to it; where a street has no address points, its house numbers come from the Census ranges.</p>
   </section>
@@ -76,7 +78,7 @@
   <section>
     <h2>Stations, districts and target hazards</h2>
     <p><strong>Richardson:</strong> the six fire stations and their apparatus come from City GIS address points and the Richardson Fire Department's public station list, and the first-due areas are the official station districts. The 82 target hazards are a researched list of places drivers can't afford to hunt for, each with its address and first-due station.</p>
-    <p><strong>Garland and Plano:</strong> stations and units come from each department's published station pages. <strong>Cities built on request:</strong> stations are drafted from OpenStreetMap and shown as estimates until a department's list is added.</p>
+    <p><strong>Garland and Plano:</strong> stations and units come from each department's published station pages. <strong>Cities built on request:</strong> stations are drafted from OpenStreetMap and shown as estimates until a department's list is added. In November 2026 we checked the stations of the cities on the list against public station listings and NERIS: missing stations were added at the Census Geocoder's position for their address, made-up station numbers were replaced with real ones, and closed stations were taken out.</p>
     <p>Outside Richardson, first-due areas are estimated by drive time from each station, and target hazards (hospitals, schools, senior living, apartment complexes, venues and more) are drafted from OpenStreetMap.</p>
   </section>
 
@@ -88,12 +90,12 @@
   <section>
     <h2>What's not on the maps yet</h2>
     <ul>
-      <li><strong>Some addresses.</strong> In Richardson, about 1% of addresses (around 280) are on newer streets OpenStreetMap doesn't have yet. In counties that don't contribute to the National Address Database, cities rely on OpenStreetMap addresses and the Census ranges.</li>
+      <li><strong>Some addresses.</strong> In Richardson, about 1% of addresses (around 280) are on newer streets OpenStreetMap doesn't have yet. In counties that don't contribute to the National Address Database, cities rely on OpenAddresses, OpenStreetMap addresses and the Census ranges.</li>
       <li><strong>Fire hydrants.</strong> They aren't in the open data StreetDrill uses.</li>
       <li><strong>Stations in cities built on request.</strong> They're estimates from OpenStreetMap until a department's list is added.</li>
       <li><strong>Ambulance numbers in Richardson.</strong> Ambulances 31 to 36 follow the "3 + station" pattern; only Ambulance 35 is confirmed in City GIS.</li>
     </ul>
-    <p>Spot something wrong, or have your department's station list? Email <a href="mailto:support@streetdrill.app?subject=Map%20data">support@streetdrill.app</a>.</p>
+    <p>Spot something wrong? Use <strong>Report a map problem</strong> in the app's <strong>Profile</strong>, or the flag on a station or street on the map. Have your department's station list? Email <a href="mailto:support@streetdrill.app?subject=Map%20data">support@streetdrill.app</a>.</p>
   </section>
 </main>
 
