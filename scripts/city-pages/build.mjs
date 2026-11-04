@@ -154,7 +154,7 @@ function cityPage(c) {
     },
     {
       q: `Are ${c.possessive || `${c.city}'s`} fire stations in it?`,
-      a: `<p>${c.stationsFaq} In a city built from open data, stations are drafted from OpenStreetMap and checked against public station listings, and they're marked as estimates until we have the department's own list. First-due areas are estimated by drive time from each station. <a href="${sendList}">Send us ${theDept}'s station list</a> and we'll make them exact.</p>`,
+      a: `<p>Yes, as estimates to start. ${c.stationsFaq ? `${c.stationsFaq} ` : ''}In a city built from open data, stations are drafted from OpenStreetMap and marked as estimates until we have the department's own list. First-due areas are estimated by drive time from each station. <a href="${sendList}">Send us ${theDept}'s station list</a> and we'll make them exact.</p>`,
     },
     ...c.faq,
     {
@@ -162,8 +162,8 @@ function cityPage(c) {
       a: `<p>No. StreetDrill is an independent study aid made by Hantis USA, LLC. It isn't affiliated with or endorsed by ${theDept}${c.notCity ? `, ${c.notCity}` : `, the City of ${c.city}`} or any other agency. ${cap(theDept)}'s maps, CAD and SOGs come first, so verify routes before relying on them.</p>`,
     },
     {
-      q: `Can I study ${c.neighbors.length > 1 ? 'the cities next door' : 'another city'} too?`,
-      a: `<p>Yes. Working a trade or overtime, or testing somewhere new? Switch cities in <strong>Profile</strong> under <strong>City</strong>: ${c.neighborsLine} Each city keeps its own progress and home base, so switching back to ${c.city} picks up where you left off.</p>`,
+      q: 'Can I study another city too?',
+      a: `<p>Yes. Working a trade or overtime, or testing somewhere new? Switch cities in <strong>Profile</strong> under <strong>City</strong>. ${c.neighborsLine} Each city keeps its own progress and home base, so switching back to ${c.city} picks up where you left off.</p>`,
     },
     {
       q: 'Does it need a signal?',
@@ -228,7 +228,7 @@ ${topbar(notify)}
         <ul class="ticks">
           <li><strong>Every street</strong> from OpenStreetMap, with the one-ways, signals and turn costs that routes follow.</li>
           <li><strong>Real addresses</strong> from the National Address Database or OpenAddresses where they cover ${c.county}, and the Census Bureau's address ranges everywhere else.</li>
-          <li><strong>Fire stations</strong> from OpenStreetMap, checked against public station listings, and marked as estimates until we have ${theDept}'s list.</li>
+          <li><strong>Fire stations</strong> from OpenStreetMap, marked as estimates until we have ${theDept}'s list.</li>
           <li><strong>First-due areas</strong> estimated by drive time from each station.</li>
           <li><strong>Target hazards</strong> from OpenStreetMap: hospitals, schools, senior living, big complexes and venues.</li>
         </ul>
@@ -258,7 +258,7 @@ ${drillCards}
         <h2>Run real ${c.city} calls from quarters</h2>
         <p class="lede">Tap Generate Random Call and a real ${c.city} address comes in like a dispatch. Then make every move: which way out of the bay, every turn, and which side the address is on.</p>
         <ul class="ticks">
-          <li><strong>Real addresses.</strong> ${c.possessive || `${c.city}'s`} own address points, in your first due or anywhere in the city.</li>
+          <li><strong>Real addresses.</strong> Address points across ${c.city}, in your first due or anywhere in the city.</li>
           <li><strong>Good alternates count.</strong> A near-equal route is right, the way it is on a real run.</li>
           <li><strong>Hospital and target hazard runs.</strong> ${c.hospitalRun}</li>
         </ul>
@@ -377,7 +377,7 @@ ${footer}`;
 
 function hubPage(cities) {
   const byName = [...cities].sort((a, b) => a.city.localeCompare(b.city));
-  const rows = byName.map(c => `        <tr><td><a href="/cities/${c.slug}/">${c.city}, ${c.state}</a></td><td>${c.dept}</td></tr>`).join('\n');
+  const rows = byName.map(c => `        <tr><td><a href="/cities/${c.slug}/">${c.city}, ${c.state}</a></td><td>${c.hubDept || c.dept}</td></tr>`).join('\n');
   const description = `StreetDrill in your city: street study for firefighters in ${byName.slice(0, 4).map(c => c.city).join(', ')} and more, and in any other US city.`;
   return `${head({ title: 'StreetDrill by City', description, path: '/cities/' })}
 ${topbar(NOTIFY_HOME)}
