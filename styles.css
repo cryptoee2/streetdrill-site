@@ -321,4 +321,9 @@ ul.sources li a { max-width: 45%; overflow: hidden; color: var(--muted); text-ov
   .card { padding: 24px; }
   .btn.big { width: 100%; }
   .doc { padding-top: 44px; }
+  /* "Coming soon to iPhone and Android" is about 292px on one line: on the narrowest phones (320px) that's wider
+     than the closing card, so it wraps instead of pushing the page sideways. The card's slimmer padding keeps it on
+     one line from 375px up. */
+  .soon { white-space: normal; text-wrap: balance; }
+  .cta-card { padding: 28px 20px; }
 }
