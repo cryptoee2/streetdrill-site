@@ -8,7 +8,6 @@
  *
  * Fields (HTML is allowed in the text, written by us):
  *   slug, city, state        slug matches packs/<slug>.json
- *   county                   for "address points ... where they cover <county>"
  *   dept                     the department's name; theDept for in-sentence use when "the <dept>" reads wrong
  *   notCity                  who else the page isn't affiliated with, when "the City of <city>" doesn't fit
  *   possessive               when "<city>'s" isn't right
@@ -24,7 +23,7 @@
 const firstDue = dept => ({
   icon: 'firstdue',
   title: 'First due',
-  body: `Whose area is it? First Due drills every station's area, estimated by drive time until we have ${dept}'s own map.`,
+  body: `Whose area is it? First Due drills every station's area: ${dept}'s own districts where we have them, and otherwise estimated by drive time.`,
   games: ['First Due', 'Response Run'],
 });
 
@@ -35,7 +34,7 @@ export const CITIES = [
   // Hospitals: Northwestern Memorial, Stroger (Cook County), UChicago Medicine (Level I adult trauma since 2018,
   // news.uchicago.edu/article/2018/04/09/uchicago-medicine-gets-approval-be-level-1-adult-trauma-center).
   {
-    slug: 'chicago-il', city: 'Chicago', state: 'IL', county: 'Cook County',
+    slug: 'chicago-il', city: 'Chicago', state: 'IL',
     dept: 'Chicago Fire Department',
     description: 'Chicago street study for firefighters: the State and Madison grid, the expressways, river bridges and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Chicago the way a real run does: an address comes in, and you call every turn out of quarters. Hundred blocks on the State and Madison grid, the expressways, the river bridges and the target hazards, in seventeen short games.',
@@ -64,7 +63,7 @@ export const CITIES = [
   // (bicmagazine.com). Holston Army Ammunition Plant Area A is in the city (globalsecurity.org); Domtar Kingsport Mill.
   // Hospitals: Holston Valley Medical Center, Indian Path Community Hospital (balladhealth.org). No published grid.
   {
-    slug: 'kingsport-tn', city: 'Kingsport', state: 'TN', county: 'Sullivan and Hawkins counties',
+    slug: 'kingsport-tn', city: 'Kingsport', state: 'TN',
     dept: 'Kingsport Fire Department',
     description: 'Kingsport street study for firefighters: Stone Drive, Fort Henry Drive, I-26, the Holston and target hazards like Eastman. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Kingsport the way a real run does: an address comes in, and you call every turn out of quarters. Stone Drive, Fort Henry Drive, the Holston, the plants and the hospitals, in seventeen short games.',
@@ -90,7 +89,7 @@ export const CITIES = [
   // No single grid: numbers count out from lines through downtown (streets.mn/2015/01/09/ive-got-your-number/).
   // Hospitals: Regions (Level I, healthpartners.com), United Hospital, 333 Smith Ave N (Allina).
   {
-    slug: 'saint-paul-mn', city: 'Saint Paul', state: 'MN', county: 'Ramsey County',
+    slug: 'saint-paul-mn', city: 'Saint Paul', state: 'MN',
     dept: 'Saint Paul Fire Department',
     description: 'Saint Paul street study for firefighters: hundred blocks, I-94 and I-35E, the Mississippi bridges and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Saint Paul the way a real run does: an address comes in, and you call every turn out of quarters. Hundred blocks, the river bridges, the bluffs and the target hazards, in seventeen short games.',
@@ -118,7 +117,7 @@ export const CITIES = [
   // (alhambraca.gov/200/Operations-Division). Huntington Drive is the spine; The Huntington at 1151 Oxford Rd,
   // San Marino High School at 2701 Huntington Dr, Lacy Park at 1485 Virginia Rd. No hospital in the city.
   {
-    slug: 'san-marino-ca', city: 'San Marino', state: 'CA', county: 'Los Angeles County',
+    slug: 'san-marino-ca', city: 'San Marino', state: 'CA',
     dept: 'San Marino Fire Department',
     description: 'San Marino street study for firefighters: every street from Station 91, Huntington Drive and the automatic-aid cities next door. Offline, iPhone and Android.',
     lede: 'StreetDrill drills you on San Marino the way a real run does: an address comes in, and you call every turn out of quarters. With one station, your first due is the whole city, so every street counts.',
@@ -147,7 +146,7 @@ export const CITIES = [
   // Addresses like 1954 N Yellowstone Hwy, 1465 W Broadway, 370 E 65th S. Snake River crossings: Broadway, Pancheri.
   // Hospitals: EIRMC, 3100 Channing Way; Idaho Falls Community Hospital, 2327 Coronado St.
   {
-    slug: 'idaho-falls-id', city: 'Idaho Falls', state: 'ID', county: 'Bonneville County',
+    slug: 'idaho-falls-id', city: 'Idaho Falls', state: 'ID',
     dept: 'Idaho Falls Fire Department',
     description: 'Idaho Falls street study for firefighters: Broadway, 17th Street, the Snake River crossings, I-15 and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Idaho Falls the way a real run does: an address comes in, and you call every turn out of quarters. Broadway, 17th Street, the Snake River crossings and the target hazards, in seventeen short games.',
@@ -173,7 +172,7 @@ export const CITIES = [
   // closed Williams at 32nd St (audacy.com/wwl). Ochsner Medical Center - Kenner, 180 W Esplanade Ave.
   // MSY is almost all in Kenner; Pontchartrain Center 4545 Williams; Treasure Chest; Esplanade Mall.
   {
-    slug: 'kenner-la', city: 'Kenner', state: 'LA', county: 'Jefferson Parish',
+    slug: 'kenner-la', city: 'Kenner', state: 'LA',
     dept: 'Kenner Fire Department',
     description: 'Kenner street study for firefighters: numbered streets from river to lake, Williams, Airline, the airport and target hazards. Offline, iPhone and Android.',
     lede: 'StreetDrill drills you on Kenner the way a real run does: an address comes in, and you call every turn out of quarters. From the river levee to the lakefront, Williams Boulevard, Airline Drive and the target hazards, in seventeen short games.',
@@ -200,7 +199,7 @@ export const CITIES = [
   // May 2024 (wellstar.org). Many Marietta mailing addresses are outside city limits (mariettaga.gov DocumentCenter 1256);
   // Dobbins ARB and Lockheed are in unincorporated Cobb, so they're not listed.
   {
-    slug: 'marietta-ga', city: 'Marietta', state: 'GA', county: 'Cobb County',
+    slug: 'marietta-ga', city: 'Marietta', state: 'GA',
     dept: 'Marietta Fire Department',
     description: 'Marietta street study for firefighters: hundred blocks off the Square, the Loop, I-75, Cobb Parkway and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Marietta the way a real run does: an address comes in, and you call every turn out of quarters. Hundred blocks off the Square, the Loop, I-75 and Cobb Parkway, and the target hazards, in seventeen short games.',
@@ -214,7 +213,7 @@ export const CITIES = [
       { icon: 'run', title: 'I-75 and Cobb Parkway', body: 'Both run north and south through the east side of the city, with the main I-75 exits at North and South Marietta Parkway. Drill the ramps out of quarters.', games: ['Response Run', 'Route Sketch'] },
       { icon: 'hazards', title: 'Target hazards', body: "The Square and Glover Park, Kennesaw State's Marietta Campus and Life University, plus the schools, senior living and big complexes in your first due.", games: ['Target Hazards', 'Flashcards'] },
       { icon: 'ambulance', title: 'Hospital runs', body: 'Wellstar Kennestone Regional Medical Center, a Level I trauma center since 2024: practice the run from quarters.', games: ['Response Run', 'Dispatch Drill'] },
-      { icon: 'firstdue', title: 'Inside the city line', body: 'StreetDrill builds Marietta to its city limits, and First Due drills each station\'s area inside them, estimated by drive time until we have the department\'s own map.', games: ['First Due', 'Response Run'] },
+      { icon: 'firstdue', title: 'Inside the city line', body: 'StreetDrill builds Marietta to its city limits, and First Due drills each station\'s area inside them.', games: ['First Due', 'Response Run'] },
     ],
     hospitalRun: 'Practice the trip from quarters to Wellstar Kennestone.',
     faq: [
@@ -229,7 +228,7 @@ export const CITIES = [
   // NC 62 is Alamance Rd (aaroads.com/guides/i-040-085-west-nc). Cone Health Alamance Regional, 1240 Huffman Mill Rd,
   // 24-hour ED (conehealth.com). Labcorp HQ downtown (labcorp.com); Alamance Crossing; Holly Hill Mall.
   {
-    slug: 'burlington-nc', city: 'Burlington', state: 'NC', county: 'Alamance County',
+    slug: 'burlington-nc', city: 'Burlington', state: 'NC',
     dept: 'Burlington Fire Department',
     description: 'Burlington street study for firefighters: Church Street, Huffman Mill Road, I-40/85, downtown and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Burlington the way a real run does: an address comes in, and you call every turn out of quarters. Church Street, Huffman Mill Road, the interstate exits and the target hazards, in seventeen short games.',
@@ -255,7 +254,7 @@ export const CITIES = [
   // Reserve, Russell, Orange, Higgins and Madison; Hellgate Canyon. Providence St. Patrick Hospital, 500 W Broadway;
   // Community Medical Center, 2827 Fort Missoula Rd. Missoula Montana Airport (renamed 2021, annexed 2018).
   {
-    slug: 'missoula-mt', city: 'Missoula', state: 'MT', county: 'Missoula County',
+    slug: 'missoula-mt', city: 'Missoula', state: 'MT',
     dept: 'Missoula Fire Department',
     description: 'Missoula street study for firefighters: Reserve, Brooks, Broadway, the Clark Fork bridges and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Missoula the way a real run does: an address comes in, and you call every turn out of quarters. Reserve, Brooks and Broadway, the Clark Fork bridges and the target hazards, in seventeen short games.',
@@ -281,7 +280,7 @@ export const CITIES = [
   // North and South Lamar either side of the Square; East and West Jackson. Hwy 6 freeway on the south side, Hwy 7
   // bypass on the east. Baptist Memorial Hospital-North Mississippi, 1100 Belk Blvd since Nov 2017 (baptistonline.org).
   {
-    slug: 'oxford-ms', city: 'Oxford', state: 'MS', county: 'Lafayette County',
+    slug: 'oxford-ms', city: 'Oxford', state: 'MS',
     dept: 'Oxford Fire Department',
     description: 'Oxford street study for firefighters: the Square, Lamar and Jackson, Highway 6 and 7, and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Oxford the way a real run does: an address comes in, and you call every turn out of quarters. The Square, Lamar and Jackson, the highway bypasses and the target hazards, in seventeen short games.',
@@ -307,7 +306,7 @@ export const CITIES = [
   // Mayo Clinic Health System, 1221 Whipple St; Marshfield Medical Center-Eau Claire, 2310 Craig Rd;
   // HSHS Sacred Heart closed March 22, 2024 (weau.com). Sonnentag Event Center (2024); Pablo Center at the Confluence.
   {
-    slug: 'eau-claire-wi', city: 'Eau Claire', state: 'WI', county: 'Eau Claire County',
+    slug: 'eau-claire-wi', city: 'Eau Claire', state: 'WI',
     dept: 'Eau Claire Fire Rescue', theDept: 'Eau Claire Fire Rescue',
     description: 'Eau Claire street study for firefighters: Clairemont, Hastings Way, the river bridges, I-94 and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Eau Claire the way a real run does: an address comes in, and you call every turn out of quarters. Clairemont, Hastings Way, the river bridges and the target hazards, in seventeen short games.',
@@ -334,7 +333,7 @@ export const CITIES = [
   // city addresses). Aultman Hospital, 2600 6th St SW; Mercy Medical Center joined Cleveland Clinic Feb 1, 2021 as
   // Cleveland Clinic Mercy Hospital (beckershospitalreview.com). I-77/US 30 interchange near downtown; Nimishillen Creek.
   {
-    slug: 'canton-oh', city: 'Canton', state: 'OH', county: 'Stark County',
+    slug: 'canton-oh', city: 'Canton', state: 'OH',
     dept: 'Canton Fire Department',
     description: 'Canton street study for firefighters: NE, NW, SE and SW off Market and Tuscarawas, I-77, US 30 and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Canton the way a real run does: an address comes in, and you call every turn out of quarters. The quadrants off Market and Tuscarawas, I-77 and US 30, and the target hazards, in seventeen short games.',
@@ -362,7 +361,7 @@ export const CITIES = [
   // Blvd, 27,000+ ER visits in 2025 (alliancehealthdurant.com). Southeastern Oklahoma State University; Choctaw Casino &
   // Resort; Choctaw Nation headquarters; Bryan County seat; Lake Texoma 15 to 20 minutes away (durantchamber.org).
   {
-    slug: 'durant-ok', city: 'Durant', state: 'OK', county: 'Bryan County',
+    slug: 'durant-ok', city: 'Durant', state: 'OK',
     dept: 'Durant Fire Department',
     description: 'Durant street study for firefighters: US 69/75, US 70, University Boulevard, Southeastern and target hazards. Offline, on iPhone and Android.',
     lede: 'StreetDrill drills you on Durant the way a real run does: an address comes in, and you call every turn out of quarters. US 69/75, US 70, University Boulevard and the target hazards, in seventeen short games.',
@@ -389,7 +388,7 @@ export const CITIES = [
   // downtown on its own diagonal grid (en.wikipedia.org/wiki/Street_system_of_Denver). Colorado Blvd 4000 E, Federal 3000 W.
   // Hospitals: Denver Health, 777 Bannock St; Intermountain Health Saint Joseph Hospital; AdventHealth Porter (renamed 2023).
   {
-    slug: 'denver-co', city: 'Denver', state: 'CO', county: 'Denver',
+    slug: 'denver-co', city: 'Denver', state: 'CO',
     dept: 'Denver Fire Department',
     notCity: 'the City and County of Denver',
     description: 'Denver street study for firefighters: hundred blocks from Broadway and Ellsworth, I-25, Colfax, the Platte and target hazards. Offline, on iPhone and Android.',
@@ -421,7 +420,7 @@ export const CITIES = [
   // Pike; Burtonsville's three public schools are all on Old Columbia Pike. Rocky Gorge Reservoir on the Patuxent,
   // between Laurel and Burtonsville (en.wikipedia.org/wiki/Rocky_Gorge_Reservoir).
   {
-    slug: 'burtonsville-md', city: 'Burtonsville', state: 'MD', county: 'Montgomery County',
+    slug: 'burtonsville-md', city: 'Burtonsville', state: 'MD',
     dept: 'Montgomery County Fire and Rescue Service', theDept: 'Montgomery County Fire and Rescue Service',
     hubDept: 'Montgomery County Fire and Rescue Service, Station 15',
     notCity: 'the Burtonsville Volunteer Fire Department, Montgomery County',
@@ -436,7 +435,7 @@ export const CITIES = [
       { icon: 'lineup', title: 'Route 29 and Route 198', body: 'Columbia Pike, Spencerville Road and Sandy Spring Road, Old Columbia Pike and Briggs Chaney Road, and the cross streets along each, in order.', games: ['Line Up', 'Cross Streets'] },
       { icon: 'run', title: 'A divided highway', body: 'Route 29 is a divided highway through the middle of Burtonsville. Drill where you can cross it and which ramps get you on, out of Station 15.', games: ['Response Run', 'Route Sketch'] },
       { icon: 'hazards', title: 'Target hazards', body: 'Paint Branch High School and the other schools on Old Columbia Pike, and the shopping center at Route 29 and Route 198, plus senior living and big complexes.', games: ['Target Hazards', 'Flashcards'] },
-      { icon: 'firstdue', title: 'Station 15', body: "Set Station 15 as your home base and drill its first-due area, estimated by drive time until we have MCFRS's own map.", games: ['First Due', 'Response Run'] },
+      { icon: 'firstdue', title: 'Station 15', body: "Set Station 15 as your home base and drill its first-due area: MCFRS's own districts where we have them, and otherwise estimated by drive time.", games: ['First Due', 'Response Run'] },
       { icon: 'trades', title: 'Across the county line', body: 'The Patuxent and Rocky Gorge Reservoir are just to the north, with Howard and Prince George\'s counties close by. Switch to Laurel or any city nearby to drill its streets too.', games: ['Response Run', 'Street Finder'] },
     ],
     hospitalRun: 'Practice the trips you can\'t afford to hunt for, from Station 15 to the schools and the shopping center.',
