@@ -154,7 +154,7 @@ function cityPage(c) {
     },
     {
       q: `Are ${c.possessive || `${c.city}'s`} fire stations in it?`,
-      a: `<p>Yes, as estimates to start. ${c.stationsFaq ? `${c.stationsFaq} ` : ''}In a city built from open data, stations are drafted from OpenStreetMap and marked as estimates until we have the department's own list. First-due areas are estimated by drive time from each station. <a href="${sendList}">Send us ${theDept}'s station list</a> and we'll make them exact.</p>`,
+      a: `<p>Yes. ${c.stationsFaq ? `${c.stationsFaq} ` : ''}Where we have a department's own station list or districts, StreetDrill uses them. Otherwise, stations are drafted from OpenStreetMap and shown as estimates until the department's list is added, and first-due areas are estimated by drive time from each station. <a href="${sendList}">Send us ${theDept}'s station list</a> and we'll make them exact.</p>`,
     },
     ...c.faq,
     {
@@ -208,8 +208,8 @@ ${topbar(notify)}
         </ul>
       </div>
       <div class="hero-phones">
-        <img class="phone back" src="/images/phone-districts.webp" width="640" height="1348" alt="StreetDrill's map with first-due districts, shown here for Richardson, TX: each fire station's area in its own color.">
-        <img class="phone front" src="/images/phone-call.webp" width="640" height="1348" alt="A new call in StreetDrill's Response Run, shown here for Richardson, TX: the call type, the address and its cross streets, and the units responding from the station.">
+        <img class="phone back" src="/images/phone-districts.webp" width="640" height="1348" alt="StreetDrill's map with a department's official first-due districts: each fire station's area in its own color.">
+        <img class="phone front" src="/images/phone-call.webp" width="640" height="1348" alt="A new call in StreetDrill's Response Run: the call type, the address and its cross streets, and the units responding from the station.">
       </div>
     </div>
   </section>
@@ -227,13 +227,13 @@ ${topbar(notify)}
         <h3>What's in ${c.possessive || `${c.city}'s`} map</h3>
         <ul class="ticks">
           <li><strong>Every street</strong> from OpenStreetMap, with the one-ways, signals and turn costs that routes follow.</li>
-          <li><strong>Real addresses</strong> from the National Address Database or OpenAddresses where they cover ${c.county}, and the Census Bureau's address ranges everywhere else.</li>
-          <li><strong>Fire stations</strong> from OpenStreetMap, marked as estimates until we have ${theDept}'s list.</li>
-          <li><strong>First-due areas</strong> estimated by drive time from each station.</li>
+          <li><strong>House numbers</strong> from public address records, estimated from public address ranges where a street has no address points.</li>
+          <li><strong>Fire stations</strong> from the department's own list where we have it. Otherwise they're drafted from OpenStreetMap and shown as estimates until we have ${theDept}'s list.</li>
+          <li><strong>First-due areas</strong> from the department's own districts where we have them, and otherwise estimated by drive time from each station.</li>
           <li><strong>Target hazards</strong> from OpenStreetMap: hospitals, schools, senior living, big complexes and venues.</li>
         </ul>
         <a class="btn block" href="${sendList}">Send us the station list</a>
-        <p class="fine">We'll make ${c.possessive || `${c.city}'s`} stations exact. <a href="/sources/">See every source</a>.</p>
+        <p class="fine">We'll make ${c.possessive || `${c.city}'s`} stations exact. <a href="/sources/">More about the map data</a>.</p>
       </div>
     </div>
   </section>
@@ -264,7 +264,7 @@ ${drillCards}
         </ul>
       </div>
       <div class="shot">
-        <img class="phone" src="/images/phone-route.webp" width="640" height="1348" loading="lazy" alt="Response Run's first move, shown here for Richardson, TX: the station and the call on a blank map, and the question of which way to turn out of the station.">
+        <img class="phone" src="/images/phone-route.webp" width="640" height="1348" loading="lazy" alt="Response Run's first move: the station and the call on a blank map, and the question of which way to turn out of the station.">
       </div>
     </div>
   </section>
@@ -298,7 +298,7 @@ ${drillCards}
         <div class="card">
           ${icon('data')}
           <h3>Open, official data</h3>
-          <p>OpenStreetMap, the National Address Database, OpenAddresses and Census address ranges. <a href="/sources/">See every source</a>.</p>
+          <p>OpenStreetMap streets, public address records, and a department's own stations and districts where we have them. <a href="/sources/">More about the map data</a>.</p>
         </div>
         <div class="card">
           ${icon('offline')}
@@ -385,7 +385,7 @@ ${topbar(NOTIFY_HOME)}
 <main class="doc">
   <header>
     <h1>StreetDrill by city</h1>
-    <p class="lede">StreetDrill works in any US city. Pick yours in the app and it's built from open map data: every street, real addresses, the fire stations and their first-due areas, and the target hazards. Here's what it drills in some of them.</p>
+    <p class="lede">StreetDrill works in any US city. Hundreds are ready to download, each with its streets, house numbers, fire stations, first-due areas and target hazards, and any other is built from open map data in 10 to 30 minutes. Here's what it drills in some of them.</p>
   </header>
 
   <section>
@@ -397,7 +397,7 @@ ${rows}
         </tbody>
       </table>
     </div>
-    <p>Richardson, Garland and Plano are already on the list in the app. <a href="/#where">More about them</a>.</p>
+    <p>Hundreds of US cities are already on the list in the app and download right away. <a href="/#where">More about where it works</a>.</p>
   </section>
 
   <section>
@@ -405,7 +405,7 @@ ${rows}
       <h2>Don't see your city?</h2>
       <p>It works there too. Type it in during setup, as city and state, and StreetDrill builds it in 10 to 30 minutes. Have your department's station list? <a href="mailto:support@streetdrill.app?subject=StreetDrill%20for%20my%20city">Send it to us</a> and we'll make your city's stations exact.</p>
     </div>
-    <p>StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department listed here. <a href="/sources/">See every data source</a>.</p>
+    <p>StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department listed here. <a href="/sources/">More about the map data</a>.</p>
   </section>
 </main>
 
