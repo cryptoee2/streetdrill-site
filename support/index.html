@@ -25,15 +25,28 @@
 <body>
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="/"><img src="/icon.png" alt="" width="34" height="34">StreetDrill</a>
-    <nav aria-label="Main">
-      <a class="page-link" href="/#how">How it works</a>
-      <a class="page-link" href="/#games">Games</a>
-      <a class="page-link" href="/#price">Price</a>
+    <a class="brand" href="/"><img src="/icon.png" alt="" width="32" height="32">StreetDrill</a>
+    <nav class="links" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#games">Games</a>
+      <a href="/#price">Price</a>
+      <a href="/cities/">Cities</a>
       <a href="/support/" aria-current="page">Support</a>
     </nav>
-    <details class="menu"><summary>Menu</summary><nav aria-label="Menu"><a href="/#how">How it works</a><a href="/#games">Games</a><a href="/#price">Price</a><a href="/support/" aria-current="page">Support</a><a href="/sources/">Data sources</a><a href="https://play.google.com/store/apps/details?id=com.streetdrill.app">Get the Android app</a><a href="mailto:support@streetdrill.app?subject=Notify%20me%20when%20StreetDrill%20launches&amp;body=Name%3A%20%0ACity%20or%20department%3A%20%0AiPhone%20or%20Android%3A%20">iPhone: get notified</a></nav></details>
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.streetdrill.app">Get the Android app</a>
+    <details class="menu">
+      <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
+      <nav aria-label="Menu">
+        <a href="/#how">How it works</a>
+        <a href="/#games">Games</a>
+        <a href="/#price">Price</a>
+        <a href="/cities/">Cities</a>
+        <a href="/support/" aria-current="page">Support</a>
+        <a href="/sources/">Data sources</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.streetdrill.app">Get it on Google Play</a>
+        <a class="soon" href="mailto:support@streetdrill.app?subject=Notify%20me%20when%20StreetDrill%20launches&amp;body=Name%3A%20%0ACity%20or%20department%3A%20%0AiPhone%20or%20Android%3A%20">iPhone coming soon: get notified</a>
+      </nav>
+    </details>
   </div>
 </header>
 
@@ -41,29 +54,42 @@
   <h1>Support</h1>
   <p class="lede">Answers to common questions, and a real person at the other end of the email.</p>
 
+  <nav class="toc" aria-label="On this page">
+    <p>On this page</p>
+    <ul>
+      <li><a href="#email">Email us</a></li>
+      <li><a href="#getting-started">Getting started</a></li>
+      <li><a href="#buying">Buying StreetDrill</a></li>
+      <li><a href="#your-city">Your city</a></li>
+      <li><a href="#games">The games</a></li>
+      <li><a href="#map-data">The map and data</a></li>
+      <li><a href="#your-data">Your progress and data</a></li>
+    </ul>
+  </nav>
+
   <section>
     <div class="callout">
-      <h3>Email us</h3>
+      <h3 id="email">Email us</h3>
       <p><a href="mailto:support@streetdrill.app">support@streetdrill.app</a>. Tell us your phone (iPhone or Android, and the model), which game, and what you were doing, and include screenshots if you can. For a route or address that looks wrong, send the address.</p>
     </div>
   </section>
 
   <section>
-    <h2>Getting started</h2>
+    <h2 id="getting-started">Getting started</h2>
     <div class="faq">
-      <details open>
+      <details>
         <summary>How do I get StreetDrill?</summary>
         <div class="answer"><p>On Android, <a href="https://play.google.com/store/apps/details?id=com.streetdrill.app">get StreetDrill on Google Play</a> (United States). The iPhone version is coming soon to the App Store: <a href="mailto:support@streetdrill.app?subject=Notify%20me%20when%20StreetDrill%20launches&amp;body=Name%3A%20%0ACity%20or%20department%3A%20%0AiPhone%20or%20Android%3A%20">email support@streetdrill.app</a> and we'll tell you the day it's out. The first 100 people to sign in with Apple or Google in the app get lifetime access free.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>How do I sign in?</summary>
         <div class="answer"><p>Type your name and tap <strong>Start studying</strong>, or use <strong>Continue with Apple</strong> (iPhone and iPad) or <strong>Continue with Google</strong>. Either way, your progress stays on that phone: signing in tells people apart on a shared phone, and checks whether your account gets StreetDrill free. Beta testers can tap <strong>I have a beta tester invite</strong> and enter the <strong>Tester ID</strong> and <strong>access code</strong> from their invite. If it says the code doesn't match, check the Tester ID first: it looks like <span class="nw">jane-doe</span>.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>How do I pick my city and station?</summary>
         <div class="answer"><p>When you first start, StreetDrill asks <strong>Where do you work?</strong> Type your city and state, or tap <strong>Use my location</strong>, then pick your station. Change them any time in <strong>Profile</strong>: <strong>City</strong> for the city, <strong>Home base</strong> for your station or any address, and <strong>Study area</strong> for that station's first-due district, a radius around your home base, or the whole city.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>What do the difficulty levels do?</summary>
         <div class="answer">
           <ul>
@@ -78,21 +104,21 @@
   </section>
 
   <section>
-    <h2>Buying StreetDrill</h2>
+    <h2 id="buying">Buying StreetDrill</h2>
     <div class="faq">
-      <details open>
+      <details>
         <summary>What does it cost?</summary>
         <div class="answer"><p>$9.99, once. StreetDrill is free to download and setup is free; a one-time purchase in the app unlocks every game and every city for life, with every future update. No subscription. The purchase belongs to the Apple or Google account you buy it with, so <strong>Restore purchases</strong> brings it back on a new phone from the same store. The first 100 people to sign in with Apple or Google in the app get lifetime access free.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>How do I restore my purchase?</summary>
         <div class="answer"><p>On the <strong>Unlock</strong> screen, tap <strong>Restore purchases</strong>, signed in to the same Apple account (iPhone and iPad) or Google account (Android) you bought it with. Each store keeps its own purchases, so a purchase on iPhone doesn't carry over to Android, or the other way round.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>How do I get a refund?</summary>
         <div class="answer"><p>The store that took the payment handles refunds. On iPhone and iPad, go to <a href="https://reportaproblem.apple.com" rel="nofollow noopener">reportaproblem.apple.com</a>. On Android, open your <a href="https://play.google.com/store/account/orderhistory" rel="nofollow noopener">Google Play order history</a>.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>Does a station iPad need a purchase for each person?</summary>
         <div class="answer"><p>No. The unlock belongs to the phone or iPad, so one purchase on a station iPad works for everyone who studies on it, each with their own progress.</p></div>
       </details>
@@ -100,17 +126,17 @@
   </section>
 
   <section>
-    <h2>Your city</h2>
+    <h2 id="your-city">Your city</h2>
     <div class="faq">
-      <details open>
+      <details>
         <summary>My city isn't on the list.</summary>
         <div class="answer"><p>Type it in anyway, as city and state. StreetDrill builds any US city from open map data and adds it to the list for everyone. It takes 10 to 30 minutes: keep the app open and it moves onto your city when it's ready. If a build fails, the app says why, and you can try again later. To keep the builder running for everyone, each internet connection can ask for three new cities a day.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>Why do some stations say they're estimates?</summary>
         <div class="answer"><p>In a city built on request, stations come from OpenStreetMap, which often lacks station numbers, addresses and units, and first-due areas are estimated by drive time from each station. We've checked the stations of the cities on the list against public station listings, but your department's own list is still best. <a href="mailto:support@streetdrill.app?subject=StreetDrill%20for%20my%20city">Send us your department's station list</a> and we'll make them exact, or use <strong>Report a map problem</strong> in <strong>Profile</strong> for a single station.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>How do I switch cities?</summary>
         <div class="answer"><p>In <strong>Profile</strong>, under <strong>City</strong>. Each city keeps its own progress and home base, so switching back picks up where you left off.</p></div>
       </details>
@@ -118,21 +144,21 @@
   </section>
 
   <section>
-    <h2>The games</h2>
+    <h2 id="games">The games</h2>
     <div class="faq">
-      <details open>
+      <details>
         <summary>Which game should I start with?</summary>
         <div class="answer"><p>Run today's <strong>Shift Drill</strong>: ten mixed questions show where you stand. Then take a <strong>Response Run</strong> from quarters and call the route turn by turn. <strong>Progress</strong> shows the streets you miss, and they come back until they stick.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>Why was my route marked wrong?</summary>
         <div class="answer"><p>Response Run accepts near-equal alternates, so a move counts as right when it keeps you close to the fastest route. Routes follow one-ways, turn costs (lefts cost more than rights) and signals, but they're a study model, not a dispatch router. If a route looks wrong for the real road, <a href="mailto:support@streetdrill.app?subject=Route%20check">email us</a> the address and the move, and we'll check it.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>I can't hear the dispatcher or the tones.</summary>
         <div class="answer"><p>On iPhone, the voice and sounds are muted when the ringer switch is set to silent. Flip it, turn the volume up (on Android, the media volume), and check that <strong>Read calls aloud</strong> (under <strong>Dispatcher voice</strong>) and <strong>Sounds</strong> are on in <strong>Profile</strong>. In Dispatch Drill you can also tap <strong>Show text</strong> to read the call.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>How does the streak work?</summary>
         <div class="answer"><p>Finish any game on a day to count it. Up to four days off in a row keep the streak alive, so studying on duty days of a <span class="nw">48/96</span> never breaks it.</p></div>
       </details>
@@ -140,17 +166,17 @@
   </section>
 
   <section>
-    <h2>The map and data</h2>
+    <h2 id="map-data">The map and data</h2>
     <div class="faq">
-      <details open>
+      <details>
         <summary>An address or street is missing.</summary>
         <div class="answer"><p>Some addresses aren't in the open data yet, most often on newer streets. Where a street has no address points, its house numbers are estimated from public address ranges. To tell us about a missing or wrong street or station, use <strong>Report a map problem</strong> in <strong>Profile</strong>, or the flag on that street or station on the map. It goes straight to us, and we fix it in the next update. You can also email us the address. <a href="/sources/">More about the map data</a>.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>Are fire hydrants on the map?</summary>
         <div class="answer"><p>No. Hydrant locations aren't in the open data StreetDrill uses.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>Is StreetDrill made by a city or fire department?</summary>
         <div class="answer"><p>No. StreetDrill is an independent study aid made by Hantis USA, LLC. It isn't affiliated with or endorsed by any city or fire department. Always follow your department's SOGs, and verify routes before relying on them.</p></div>
       </details>
@@ -158,21 +184,21 @@
   </section>
 
   <section>
-    <h2>Your progress and data</h2>
+    <h2 id="your-data">Your progress and data</h2>
     <div class="faq">
-      <details open>
+      <details>
         <summary>Where is my progress saved?</summary>
         <div class="answer"><p>On your phone, and nowhere else: StreetDrill has no account server. To move to a new phone, use <strong>Back up progress</strong> in <strong>Progress</strong>, then <strong>Restore from a backup</strong> on the new one. StreetDrill uses your location only to find your city when you ask and while Glance is open, and keeps only the city name. <a href="/privacy/">Read the privacy policy</a>.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>What's in the progress report?</summary>
         <div class="answer"><p>Your name, Tester ID and role, the rating and notes you gave each game, your sessions, accuracy and weakest streets, and the questions you flagged. It goes out only when you tap <strong>Share progress report</strong> in <strong>Progress</strong>, as a text or email you send yourself.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>How do I reset or delete my progress?</summary>
         <div class="answer"><p>In <strong>Progress</strong>, tap <strong>Reset progress</strong>. That clears XP, your streak, game stats, mastery, history and ratings on that phone. Deleting the app removes everything. <a href="/privacy/#delete-data">More about your data</a>.</p></div>
       </details>
-      <details open>
+      <details>
         <summary>Can several people share one phone?</summary>
         <div class="answer"><p>Yes, like a station iPad. Each person's progress is kept apart: the first screen lists everyone who has studied on it, and <strong>Profile</strong> &rsaquo; <strong>Switch person</strong> goes back to that list.</p></div>
       </details>
@@ -182,15 +208,36 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
-    <nav aria-label="Footer">
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
-      <a href="/sources/">Data sources</a>
-      <a href="/cities/">Cities</a>
-      <a href="/support/">Support</a>
-      <a href="https://www.youtube.com/channel/UCNtybNOqndy-CiiGpY3CRfg">YouTube</a>
-    </nav>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/"><img src="/icon.png" alt="" width="32" height="32">StreetDrill</a>
+        <p>Street study for firefighters, in any US city.</p>
+      </div>
+      <nav aria-label="Footer">
+        <div>
+          <p>The app</p>
+          <a href="/#how">How it works</a>
+          <a href="/#games">Games</a>
+          <a href="/#price">Price</a>
+          <a href="/cities/">Cities</a>
+        </div>
+        <div>
+          <p>Help</p>
+          <a href="/support/">Support</a>
+          <a href="/sources/">Data sources</a>
+        </div>
+        <div>
+          <p>Legal</p>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+        </div>
+        <div>
+          <p>Follow</p>
+          <a href="https://www.youtube.com/channel/UCNtybNOqndy-CiiGpY3CRfg">YouTube</a>
+        </div>
+      </nav>
+    </div>
+    <p class="legal">&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
   </div>
 </footer>
 <script src="/analytics.js" defer></script>

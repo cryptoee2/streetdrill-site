@@ -26,15 +26,28 @@
 <!-- Made by scripts/site/city-pages/build.mjs from scripts/site/city-pages/cities.mjs: edit those, not this file. -->
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="/"><img src="/icon.png" alt="" width="34" height="34">StreetDrill</a>
-    <nav aria-label="Main">
-      <a class="page-link" href="/#how">How it works</a>
-      <a class="page-link" href="/#games">Games</a>
-      <a class="page-link" href="/#price">Price</a>
+    <a class="brand" href="/"><img src="/icon.png" alt="" width="32" height="32">StreetDrill</a>
+    <nav class="links" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#games">Games</a>
+      <a href="/#price">Price</a>
+      <a href="/cities/" aria-current="page">Cities</a>
       <a href="/support/">Support</a>
     </nav>
-    <details class="menu"><summary>Menu</summary><nav aria-label="Menu"><a href="/#how">How it works</a><a href="/#games">Games</a><a href="/#price">Price</a><a href="/support/">Support</a><a href="/sources/">Data sources</a><a href="https://play.google.com/store/apps/details?id=com.streetdrill.app">Get the Android app</a><a href="mailto:support@streetdrill.app?subject=Notify%20me%20when%20StreetDrill%20launches&amp;body=Name%3A%20%0ACity%20or%20department%3A%20%0AiPhone%20or%20Android%3A%20">iPhone: get notified</a></nav></details>
     <a class="btn" href="https://play.google.com/store/apps/details?id=com.streetdrill.app">Get the Android app</a>
+    <details class="menu">
+      <summary aria-label="Menu"><span class="bars" aria-hidden="true"></span></summary>
+      <nav aria-label="Menu">
+        <a href="/#how">How it works</a>
+        <a href="/#games">Games</a>
+        <a href="/#price">Price</a>
+        <a href="/cities/" aria-current="page">Cities</a>
+        <a href="/support/">Support</a>
+        <a href="/sources/">Data sources</a>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.streetdrill.app">Get it on Google Play</a>
+        <a class="soon" href="mailto:support@streetdrill.app?subject=Notify%20me%20when%20StreetDrill%20launches&amp;body=Name%3A%20%0ACity%20or%20department%3A%20%0AiPhone%20or%20Android%3A%20">iPhone coming soon: get notified</a>
+      </nav>
+    </details>
   </div>
 </header>
 
@@ -45,28 +58,23 @@
   </header>
 
   <section>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th scope="col">City</th><th scope="col">Fire department</th></tr></thead>
-        <tbody>
-        <tr><td><a href="/cities/burlington-nc/">Burlington, NC</a></td><td>Burlington Fire Department</td></tr>
-        <tr><td><a href="/cities/burtonsville-md/">Burtonsville, MD</a></td><td>Montgomery County Fire and Rescue Service, Station 15</td></tr>
-        <tr><td><a href="/cities/canton-oh/">Canton, OH</a></td><td>Canton Fire Department</td></tr>
-        <tr><td><a href="/cities/chicago-il/">Chicago, IL</a></td><td>Chicago Fire Department</td></tr>
-        <tr><td><a href="/cities/denver-co/">Denver, CO</a></td><td>Denver Fire Department</td></tr>
-        <tr><td><a href="/cities/durant-ok/">Durant, OK</a></td><td>Durant Fire Department</td></tr>
-        <tr><td><a href="/cities/eau-claire-wi/">Eau Claire, WI</a></td><td>Eau Claire Fire Rescue</td></tr>
-        <tr><td><a href="/cities/idaho-falls-id/">Idaho Falls, ID</a></td><td>Idaho Falls Fire Department</td></tr>
-        <tr><td><a href="/cities/kenner-la/">Kenner, LA</a></td><td>Kenner Fire Department</td></tr>
-        <tr><td><a href="/cities/kingsport-tn/">Kingsport, TN</a></td><td>Kingsport Fire Department</td></tr>
-        <tr><td><a href="/cities/marietta-ga/">Marietta, GA</a></td><td>Marietta Fire Department</td></tr>
-        <tr><td><a href="/cities/missoula-mt/">Missoula, MT</a></td><td>Missoula Fire Department</td></tr>
-        <tr><td><a href="/cities/oxford-ms/">Oxford, MS</a></td><td>Oxford Fire Department</td></tr>
-        <tr><td><a href="/cities/saint-paul-mn/">Saint Paul, MN</a></td><td>Saint Paul Fire Department</td></tr>
-        <tr><td><a href="/cities/san-marino-ca/">San Marino, CA</a></td><td>San Marino Fire Department</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <ul class="city-list">
+      <li><a href="/cities/burlington-nc/"><strong>Burlington, NC</strong><span>Burlington Fire Department</span></a></li>
+      <li><a href="/cities/burtonsville-md/"><strong>Burtonsville, MD</strong><span>Montgomery County Fire and Rescue Service, Station 15</span></a></li>
+      <li><a href="/cities/canton-oh/"><strong>Canton, OH</strong><span>Canton Fire Department</span></a></li>
+      <li><a href="/cities/chicago-il/"><strong>Chicago, IL</strong><span>Chicago Fire Department</span></a></li>
+      <li><a href="/cities/denver-co/"><strong>Denver, CO</strong><span>Denver Fire Department</span></a></li>
+      <li><a href="/cities/durant-ok/"><strong>Durant, OK</strong><span>Durant Fire Department</span></a></li>
+      <li><a href="/cities/eau-claire-wi/"><strong>Eau Claire, WI</strong><span>Eau Claire Fire Rescue</span></a></li>
+      <li><a href="/cities/idaho-falls-id/"><strong>Idaho Falls, ID</strong><span>Idaho Falls Fire Department</span></a></li>
+      <li><a href="/cities/kenner-la/"><strong>Kenner, LA</strong><span>Kenner Fire Department</span></a></li>
+      <li><a href="/cities/kingsport-tn/"><strong>Kingsport, TN</strong><span>Kingsport Fire Department</span></a></li>
+      <li><a href="/cities/marietta-ga/"><strong>Marietta, GA</strong><span>Marietta Fire Department</span></a></li>
+      <li><a href="/cities/missoula-mt/"><strong>Missoula, MT</strong><span>Missoula Fire Department</span></a></li>
+      <li><a href="/cities/oxford-ms/"><strong>Oxford, MS</strong><span>Oxford Fire Department</span></a></li>
+      <li><a href="/cities/saint-paul-mn/"><strong>Saint Paul, MN</strong><span>Saint Paul Fire Department</span></a></li>
+      <li><a href="/cities/san-marino-ca/"><strong>San Marino, CA</strong><span>San Marino Fire Department</span></a></li>
+    </ul>
     <p>Hundreds of US cities are already on the list in the app and download right away. <a href="/#where">More about where it works</a>.</p>
   </section>
 
@@ -81,15 +89,36 @@
 
 <footer class="footer">
   <div class="wrap">
-    <p>&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
-    <nav aria-label="Footer">
-      <a href="/privacy/">Privacy</a>
-      <a href="/terms/">Terms</a>
-      <a href="/sources/">Data sources</a>
-      <a href="/cities/">Cities</a>
-      <a href="/support/">Support</a>
-      <a href="https://www.youtube.com/channel/UCNtybNOqndy-CiiGpY3CRfg">YouTube</a>
-    </nav>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/"><img src="/icon.png" alt="" width="32" height="32">StreetDrill</a>
+        <p>Street study for firefighters, in any US city.</p>
+      </div>
+      <nav aria-label="Footer">
+        <div>
+          <p>The app</p>
+          <a href="/#how">How it works</a>
+          <a href="/#games">Games</a>
+          <a href="/#price">Price</a>
+          <a href="/cities/">Cities</a>
+        </div>
+        <div>
+          <p>Help</p>
+          <a href="/support/">Support</a>
+          <a href="/sources/">Data sources</a>
+        </div>
+        <div>
+          <p>Legal</p>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+        </div>
+        <div>
+          <p>Follow</p>
+          <a href="https://www.youtube.com/channel/UCNtybNOqndy-CiiGpY3CRfg">YouTube</a>
+        </div>
+      </nav>
+    </div>
+    <p class="legal">&copy; <span data-year>2026</span> Hantis USA, LLC. StreetDrill is an independent study aid, not affiliated with or endorsed by any city or fire department. Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
   </div>
 </footer>
 <script src="/analytics.js" defer></script>
